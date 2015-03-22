@@ -1,0 +1,9 @@
+#log_in_content.display-none.h4.overflow-hidden
+	.p1.h4
+		%form.absolute-center{:action => "/", :method => "post", :name => "login", :onsubmit => "/"}
+			%input.field-light.width-200.m1{:autofocus => "", :name => "email", :type => "text", :placeholder => "Email Address"}/
+			%br/
+			%input.field-light.width-200.m1{:name => "password", :type => "password", :placeholder => "Password"}/
+			%br/
+			%br/
+			%input.button.button-red.absolute-center{:value => "Log In", :type => "submit"}/

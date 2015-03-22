@@ -1,0 +1,78 @@
+/ page title
+- @title="CAMPTRIP - Plan your next adventure"
+/ page body
+.block.p0.m0.index-bg-image.bg-cover.bg-bottom
+  .clearfix.sm-hide.bg-red.white.p0
+    .col.col-6.left-align
+      .ml1.bold.title-font
+        %i.fa.fa-tree
+        CAMPTRIP
+    .col.col-6.right-align
+      .mr1
+        %i.fa.fa-bars
+  .absolute-center.title-font.h1.white.bold
+    %br/
+    %span.sm-show
+      %br/
+      CAMPTR
+      %i.fa.fa-tree.green>
+      P
+  .absolute-center.h4.white
+    %span.sm-show
+      Search, Book, and Organize Individual, Family, and Group Camp Outings!
+  .white
+    .p1.h5.absolute-center
+      %br.sm-hide/
+      = text_field_tag :myid, nil, placeholder: 'Enter Destination...', autofocus: '', :class => 'field-trans main-search h3 m1'
+      %input.button.bg-red.absolute-center{:value => "EXPLORE", :type => "submit"}/
+  /#map.map-width{:style => "width: 100%"}
+  %span.sm-show
+    %br/
+    %br/
+  %br/
+  %span.sm-hide
+    %br/
+  .clearfix.bg-trans.dark-gray.px1.border-bottom.h4
+    .col.col-6.left-align
+      %a.dark-gray{:href => "#", :title => "we tweet!"}
+        %i.fa.fa-twitter.grow
+      &nbsp;
+      %a.dark-gray{:href => "#", :title => "we instagram!"}
+        %i.fa.fa-instagram.grow
+      &nbsp;
+      %a.dark-gray{:href => "#", :title => "we pinterest!"}
+        %i.fa.fa-pinterest-p.grow
+    .col.col-6.right-align.h4
+      %span.dark-gray
+        %a.dark-gray{:href => "#", :title => "Create Free Account"}
+          Create FREE Account
+        %span= h(" | ")
+      %span#log_in.blue.bold.cursor-pointer
+        Log In
+        %i.fa.fa-user
+%br/
+.clearfix.m2.max-width-main.absolute-center.center
+  .flex-block-3.center
+    %i.fa.fa-search.fa-3x.dark-gray
+    %br/
+    SEARCH
+    .h5.justify.p2.mt0
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vulputate tempor risus quis congue. Etiam consectetur metus sit amet erat efficitur, non dignissim enim luctus. Aliquam vitae tellus tristique, porta libero in, pretium ipsum. Phasellus odio leo, molestie in lorem id, ornare eleifend felis. Maecenas magna quam, convallis id vestibulum nec, venenatis at mauris. Maecenas eu massa a diam sagittis interdum non in velit. Donec eget nibh sit amet orci ultricies malesuada ac at ex.
+  .flex-block-3.center
+    %i.fa.fa-calendar.fa-3x.dark-gray
+    %br/
+    BOOK
+    .h5.justify.p2.mt0
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vulputate tempor risus quis congue. Etiam consectetur metus sit amet erat efficitur, non dignissim enim luctus. Aliquam vitae tellus tristique, porta libero in, pretium ipsum. Phasellus odio leo, molestie in lorem id, ornare eleifend felis. Maecenas magna quam, convallis id vestibulum nec, venenatis at mauris. Maecenas eu massa a diam sagittis interdum non in velit. Donec eget nibh sit amet orci ultricies malesuada ac at ex.
+  .flex-block-3.center
+    %i.fa.fa-pencil-square-o.fa-3x.dark-gray
+    %br/
+    ORGANIZE
+    .h5.justify.p2.mt0
+      Organize your adventure for yourself or collaborate with your group using built-in tools such as checklists, ...
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vulputate tempor risus quis congue. Etiam consectetur metus sit amet erat efficitur, non dignissim enim luctus. Aliquam vitae tellus tristique, porta libero in, pretium ipsum. Phasellus odio leo, molestie in lorem id, ornare eleifend felis. Maecenas magna quam, convallis id vestibulum nec, venenatis at mauris. Maecenas eu massa a diam sagittis interdum non in velit. Donec eget nibh sit amet orci ultricies malesuada ac at ex.
+%br/
+/ Footer
+= render partial: "footer"
+/ Login Options Overlay
+= render partial: "login_options"
