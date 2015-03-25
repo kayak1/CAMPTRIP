@@ -11,23 +11,39 @@
     Begin Custom Section
 */
 @font-face {
-font-family: cabin;
-src: font-url('Cabin-Regular.otf');
+font-family: workhorse;
+src: font-url('WorkhorseWeb.eot');
+src: font-url('WorkhorseWeb.eot?#iefix') format('embedded-opentype'),
+     font-url('WorkhorseWeb.woff') format('woff');
 font-weight: normal;
 font-style: normal;
 }
 
 @font-face {
-font-family: lobster;
-src: font-url('Lobster_1.3.otf');
+font-family: workhorse-rough;
+src: font-url('Workhorse-RoughWeb.eot');
+src: font-url('Workhorse-RoughWeb.eot?#iefix') format('embedded-opentype'),
+     font-url('Workhorse-RoughWeb.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: cabin;
+src: font-url('Cabin-Regular.otf') format('opentype');
 font-weight: normal;
 font-style: normal;
 }
 
 .title-font{
-  font-family: cabin; 
+  font-family: workhorse-rough; 
   line-height: 1.5;
   letter-spacing: 3px;
+  font-size: 2rem;
+}
+
+.wh-font{
+  font-family: workhorse-rough;
 }
 
 .max-width-main{

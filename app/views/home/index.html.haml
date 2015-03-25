@@ -1,36 +1,42 @@
 / page title
-- @title="CAMPTRIP - Plan your next adventure"
+- @title="CAMPEIGHT - Plan your next adventure"
 / page body
 .block.p0.m0.index-bg-image.bg-cover.bg-bottom
-  .clearfix.sm-hide.bg-red.white.p0
+  .clearfix.bg-trans.dark-gray.px1.border-bottom.sm-show
+    .left-align.max-width-main.full-width.absolute-center.title-font
+      CAMP
+      %span.red> EIGHT
+  .clearfix.bg-trans.dark-gray.px1.border-bottom.sm-hide
     .col.col-6.left-align
-      .ml1.bold.title-font
-        %i.fa.fa-tree
-        CAMPTRIP
+      .left-align.max-width-main.full-width.absolute-center.wh-font
+        CAMP
+        %span.red> EIGHT
     .col.col-6.right-align
       .mr1
         %i.fa.fa-bars
   .absolute-center.title-font.h1.white.bold
     %br/
+    %br/
     %span.sm-show
       %br/
-      CAMPTR
-      %i.fa.fa-tree>
-      P
-  .absolute-center.h4.white
-    %span.sm-show
-      Search, Book, and Organize Individual, Family, and Group Camp Outings!
+  .absolute-center.h2.white
+    %span.sm-show.wh-font
+      FIND YOUR BASECAMP:
   .white
     .p1.h5.absolute-center
       %br.sm-hide/
       = text_field_tag :myid, nil, placeholder: 'Enter Destination...', autofocus: '', :class => 'field-trans main-search h3 m1'
       %input.button.bg-red.absolute-center{:value => "EXPLORE", :type => "submit"}/
-  /#map.map-width{:style => "width: 100%"}
   %span.sm-show
     %br/
     %br/
-  %br/
+    %br/
+    %br/
+    %br/
+    %br/
   %span.sm-hide
+    %br/
+    %br/
     %br/
   .clearfix.bg-trans.dark-gray.px1.border-bottom.h3
     .left-align.max-width-main.full-width.absolute-center
@@ -47,22 +53,29 @@
   .flex-block-3.center
     %i.fa.fa-search.fa-3x.dark-gray
     %br/
-    SEARCH
+    .h3
+      SEARCH
     .h5.justify.p2.mt0
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vulputate tempor risus quis congue. Etiam consectetur metus sit amet erat efficitur, non dignissim enim luctus. Aliquam vitae tellus tristique, porta libero in, pretium ipsum. Phasellus odio leo, molestie in lorem id, ornare eleifend felis. Maecenas magna quam, convallis id vestibulum nec, venenatis at mauris. Maecenas eu massa a diam sagittis interdum non in velit. Donec eget nibh sit amet orci ultricies malesuada ac at ex.
   .flex-block-3.center
     %i.fa.fa-calendar.fa-3x.dark-gray
     %br/
-    BOOK
+    .h3
+      BOOK
     .h5.justify.p2.mt0
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vulputate tempor risus quis congue. Etiam consectetur metus sit amet erat efficitur, non dignissim enim luctus. Aliquam vitae tellus tristique, porta libero in, pretium ipsum. Phasellus odio leo, molestie in lorem id, ornare eleifend felis. Maecenas magna quam, convallis id vestibulum nec, venenatis at mauris. Maecenas eu massa a diam sagittis interdum non in velit. Donec eget nibh sit amet orci ultricies malesuada ac at ex.
   .flex-block-3.center
     %i.fa.fa-pencil-square-o.fa-3x.dark-gray
     %br/
-    ORGANIZE
+    .h3
+      ORGANIZE
     .h5.justify.p2.mt0
       Organize your adventure for yourself or collaborate with your group using built-in tools such as checklists, ...
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vulputate tempor risus quis congue. Etiam consectetur metus sit amet erat efficitur, non dignissim enim luctus. Aliquam vitae tellus tristique, porta libero in, pretium ipsum. Phasellus odio leo, molestie in lorem id, ornare eleifend felis. Maecenas magna quam, convallis id vestibulum nec, venenatis at mauris. Maecenas eu massa a diam sagittis interdum non in velit. Donec eget nibh sit amet orci ultricies malesuada ac at ex.
+%br/
+%br/
+#map.map-width{:style => "width: 100%"}
+%br/
 %br/
 / Footer
 = render partial: "footer"
