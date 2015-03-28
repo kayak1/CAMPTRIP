@@ -1,0 +1,19 @@
+/ page title
+- @title="CAMPEIGHT - Find Your Next Basecamp"
+/ page body
+= link_to 'New Campground', new_campground_path, :class => 'button p1 m1'
+%h1.p1 Campground List
+%table.p1
+  %tr
+    %th ID
+    %th Name
+    %th State
+    %th{:colspan => "3"}
+  - @campgrounds.each do |campground|
+    %tr
+      %td= campground.id
+      %td= campground.name
+      %td= campground.state
+      %td= link_to 'Show', campground_path(campground)
+      %td= link_to 'Edit', edit_campground_path(campground)
+      %td= link_to 'Destroy', campground_path(campground), method: :delete, data: { confirm: 'Are you sure?' }

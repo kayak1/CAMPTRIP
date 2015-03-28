@@ -1,0 +1,99 @@
+/partial
+
+.m1.block
+  - if @campground.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@campground.errors.count, "error")
+        prohibited this campground from being saved:
+      %ul
+        - @campground.errors.full_messages.each do |msg|
+          %li= msg
+.m1.block
+  = form_for @campground do |f|
+    %p
+      = f.label :campground_name, "Campground Name"
+      %br/
+      = f.text_field :name
+    %p
+      = f.label :campground_state, "Campground State [dropdown]"
+      %br/
+      = f.text_field :state
+    %p
+      = f.label :region1, "Region 1 (Large) [dropdown]"
+      %br/
+      = f.text_field :region1
+    %p
+      = f.label :region2, "Region 2 (Small) [dropdown]"
+      %br/
+      = f.text_field :region2
+    %p
+      = f.label :lon, "Longitude"
+      %br/
+      = f.text_field :lon
+    %p
+      = f.label :lat, "Latitude"
+      %br/
+      = f.text_field :lat
+    %p
+      = f.label :elevation
+      %br/
+      = f.text_field :elevation
+    %p
+      = f.label :no_of_sites, "Number of Sites (autofill)"
+      %br/
+      = f.text_field :no_of_sites
+    %p
+      = f.label :org_name, "Organization Name (e.g. US Forest Service) [dropdown]"
+      %br/
+      = f.text_field :org_name
+    %p
+      = f.label :phone
+      %br/
+      = f.phone_field :phone
+    %p
+      = f.label :open_date, "Open Date"
+      %br/
+      = f.date_field :open_date
+    %p
+      = f.label :close_date, "Close Date"
+      %br/
+      = f.date_field :close_date
+    %p
+      = f.label :fee1, "Fee 1 (peak)"
+      %br/
+      = f.text_field :fee1
+    %p
+      = f.label :fee2, "Fee 2 (offseason)"
+      %br/
+      = f.text_field :fee2
+    %p
+      = f.label :day_limit, "Stay Limit (days)"
+      %br/
+      = f.text_field :day_limit
+    %p
+      = f.label :scenic_rating, "Scenic Rating [autofill]"
+      %br/
+      = f.text_field :scenic_rating
+    %p
+      = f.label :rugged_rating, "Rugged Rating [autofill]"
+      %br/
+      = f.text_field :rugged_rating
+    %p
+      = f.label :rv_rating, "RV Rating [autofill]"
+      %br/
+      = f.text_field :rv_rating
+    %p
+      = f.label :family_rating, "Family Rating [autofill]"
+      %br/
+      = f.text_field :family_rating
+    %p
+      = f.label :group_camp, "Group Camp"
+      %br/
+      = f.select(:group_camp, ["No","Yes"], {}, :class => "block field-light")
+    %p
+      = f.label :private_camp, "Private Camp"
+      %br/
+      = f.select(:private_camp, ["No","Yes"], {}, :class => "block field-light")
+    %p
+      = f.submit :class => "button"

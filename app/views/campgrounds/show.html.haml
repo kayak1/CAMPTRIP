@@ -1,0 +1,12 @@
+/ page title
+- @title="CAMPEIGHT - Find Your Next Basecamp"
+/ page body
+= link_to 'Back', campgrounds_path, :class => 'button p1 m1'
+= link_to 'Edit', edit_campground_path(@campground)
+
+%p
+  %strong Campground:
+  = @campground.name
+%p
+  %strong State:
+  = @campground.state

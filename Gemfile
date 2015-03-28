@@ -2,8 +2,9 @@ source 'https://rubygems.org'
 
 gem 'font-awesome-sass'
 gem 'haml'
+gem 'friendly_id'
 
-gem 'sqlite3'
+gem 'mysql2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use SCSS for stylesheets
