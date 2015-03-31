@@ -41,7 +41,6 @@ class CampgroundsController < ApplicationController
  
   		redirect_to campgrounds_path
 	end
-
 	private
 	def campground_params
 		params.require(:campground).permit(:name, :state, :region1, :region2, :lon, :lat, :elevation, :no_of_sites, :org_name, :phone, :open_date, :close_date, :fee1, :fee2, :day_limit, :scenic_rating, :rugged_rating, :rv_rating, :family_rating, :group_camp, :private_camp)

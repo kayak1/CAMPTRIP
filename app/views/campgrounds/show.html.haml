@@ -1,6 +1,92 @@
 / page title
 - @title="CAMPEIGHT - Find Your Next Basecamp"
 / page body
+.block.p0.m0.index-bg-image.bg-cover.bg-bottom
+  .clearfix.bg-trans.dark-gray.px1.border-bottom.sm-show
+    .left-align.max-width-main.full-width.absolute-center.title-font
+      %i.fa.fa-fire>
+      CAMP
+      %span.red> EIGHT
+  .clearfix.bg-trans.dark-gray.px1.border-bottom.sm-hide
+    .col.col-6.left-align
+      .left-align.max-width-main.full-width.absolute-center.wh-font
+        %i.fa.fa-fire>
+        CAMP
+        %span.red> EIGHT
+    .col.col-6.right-align
+      .mr1
+        %i.fa.fa-bars
+  .clearfix.white.max-width-main.full-width.absolute-center.p1
+    .col.col-8.left-align
+      %span.sm-show
+        %br/
+        %br/
+        %br/
+        %br/
+        %br/
+        %br/
+        %br/
+        %br/
+        %br/
+        %br/
+        %br/
+      %span.sm-hide
+        %br/
+        %br/
+        %br/
+      .h5.caps
+        = [@campground.state, " | ",@campground.region2].join("")
+      .h1.bold
+        = @campground.name
+      .italic.h5
+        = ["N",format('%.4f',@campground.lat).chop, ", ","W",format('%.4f',@campground.lon.abs).chop].join("")
+        &nbsp;
+        = ["Elevation: ",number_with_delimiter(@campground.elevation,:delimiter => ',') ," ft"].join("")
+    .col.col-4.right-align
+      Test
+  .clearfix.bg-trans.dark-gray.px1.border-bottom.h3
+    .left-align.max-width-main.full-width.absolute-center
+      %a.dark-gray{:href => "#", :title => "we tweet!"}
+        %i.fa.fa-twitter.grow
+      &nbsp;
+      %a.dark-gray{:href => "#", :title => "we instagram!"}
+        %i.fa.fa-instagram.grow
+      &nbsp;
+      %a.dark-gray{:href => "#", :title => "we pinterest!"}
+        %i.fa.fa-pinterest-p.grow
+%br/
+.clearfix.m2.max-width-main.absolute-center.center
+  .flex-block-3.center
+    %i.fa.fa-search.fa-3x.dark-gray
+    %br/
+    .h3
+      SEARCH
+    .h5.justify.p2.mt0
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vulputate tempor risus quis congue. Etiam consectetur metus sit amet erat efficitur, non dignissim enim luctus. Aliquam vitae tellus tristique, porta libero in, pretium ipsum. Phasellus odio leo, molestie in lorem id, ornare eleifend felis. Maecenas magna quam, convallis id vestibulum nec, venenatis at mauris. Maecenas eu massa a diam sagittis interdum non in velit. Donec eget nibh sit amet orci ultricies malesuada ac at ex.
+  .flex-block-3.center
+    %i.fa.fa-calendar.fa-3x.dark-gray
+    %br/
+    .h3
+      BOOK
+    .h5.justify.p2.mt0
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vulputate tempor risus quis congue. Etiam consectetur metus sit amet erat efficitur, non dignissim enim luctus. Aliquam vitae tellus tristique, porta libero in, pretium ipsum. Phasellus odio leo, molestie in lorem id, ornare eleifend felis. Maecenas magna quam, convallis id vestibulum nec, venenatis at mauris. Maecenas eu massa a diam sagittis interdum non in velit. Donec eget nibh sit amet orci ultricies malesuada ac at ex.
+  .flex-block-3.center
+    %i.fa.fa-pencil-square-o.fa-3x.dark-gray
+    %br/
+    .h3
+      ORGANIZE
+    .h5.justify.p2.mt0
+      Organize your adventure for yourself or collaborate with your group using built-in tools such as checklists, ...
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vulputate tempor risus quis congue. Etiam consectetur metus sit amet erat efficitur, non dignissim enim luctus. Aliquam vitae tellus tristique, porta libero in, pretium ipsum. Phasellus odio leo, molestie in lorem id, ornare eleifend felis. Maecenas magna quam, convallis id vestibulum nec, venenatis at mauris. Maecenas eu massa a diam sagittis interdum non in velit. Donec eget nibh sit amet orci ultricies malesuada ac at ex.
+%br/
+%br/
+#map.map-width{:style => "width: 100%"}
+%br/
+%br/
+/ Footer
+/= render partial: "footer"
+
+
 = link_to 'Back', campgrounds_path, :class => 'button p1 m1'
 = link_to 'Edit', edit_campground_path(@campground)
 
