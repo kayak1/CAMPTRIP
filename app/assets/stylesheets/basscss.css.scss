@@ -44,9 +44,14 @@ font-style: normal;
 .wh-font{
   font-family: workhorse-rough;
 }
-
 .max-width-main{
   max-width: 1250px;
+}
+.width-auto{
+  width:auto;
+}
+.height-500{
+  height: 520px;
 }
 .map-width{
   max-width: 800px;
@@ -58,7 +63,7 @@ font-style: normal;
 }
 .flex-block-3 {
   display: inline-block;
-  width: 400px;
+  max-width: 400px;
   vertical-align: top;
 }
 .flex-block-2 {

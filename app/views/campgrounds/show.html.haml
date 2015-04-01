@@ -1,39 +1,26 @@
 / page title
 - @title="CAMPEIGHT - Find Your Next Basecamp"
 / page body
-.block.p0.m0.index-bg-image.bg-cover.bg-bottom
-  .clearfix.bg-trans.dark-gray.px1.border-bottom.sm-show
-    .left-align.max-width-main.full-width.absolute-center.title-font
+.p0.m0.index-bg-image.bg-cover.bg-bottom.height-500.border-bottom.relative.full-width
+  .clearfix.bg-trans.dark-gray.px1.border-bottom.fixed.full-width.z4
+    .col.col-6.left-align.max-width-main.full-width.absolute-center.title-font
       %i.fa.fa-fire>
       CAMP
       %span.red> EIGHT
-  .clearfix.bg-trans.dark-gray.px1.border-bottom.sm-hide
-    .col.col-6.left-align
-      .left-align.max-width-main.full-width.absolute-center.wh-font
-        %i.fa.fa-fire>
-        CAMP
-        %span.red> EIGHT
-    .col.col-6.right-align
-      .mr1
-        %i.fa.fa-bars
-  .clearfix.white.max-width-main.full-width.absolute-center.p1
-    .col.col-8.left-align
-      %span.sm-show
-        %br/
-        %br/
-        %br/
-        %br/
-        %br/
-        %br/
-        %br/
-        %br/
-        %br/
-        %br/
-        %br/
-      %span.sm-hide
-        %br/
-        %br/
-        %br/
+    .col-right.col-6.right-align
+      .button.button-transparent.red.p1{:href => "#", :title => "register free!"}
+        Register Free!
+      .button.m1.p1.mr2{:href => "#", :title => "log in"}
+        Log In
+  .absolute.bottom-0.right-0
+    .mb3.ml3
+      %a.white{:href => "#", :title => "i've been here!"}
+        %i.fa.fa-map-marker.fa-2x.grow
+      &nbsp;
+      %a.white.mr2{:href => "#", :title => "favorite!"}
+        %i.fa.fa-heartbeat.fa-2x.grow
+  .white.max-width-main.full-width
+    .col.col-9.left-align.bottom-0.absolute.mb3.ml1
       .h5.caps
         = [@campground.state, " | ",@campground.region2].join("")
       .h1.bold
@@ -42,11 +29,19 @@
         = ["N",format('%.4f',@campground.lat).chop, ", ","W",format('%.4f',@campground.lon.abs).chop].join("")
         &nbsp;
         = ["Elevation: ",number_with_delimiter(@campground.elevation,:delimiter => ',') ," ft"].join("")
-    .col.col-4.right-align
-      Test
-  .clearfix.bg-trans.dark-gray.px1.border-bottom.h3
-    .left-align.max-width-main.full-width.absolute-center
-      %a.dark-gray{:href => "#", :title => "we tweet!"}
+    .col-right.col-3.right-align.mt4.mr2
+      %br/
+      %i.fa.fa-square.fa-5x
+      %br/
+      %i.fa.fa-square.fa-5x
+      %br/
+      %i.fa.fa-square.fa-5x
+      %br/
+      %i.fa.fa-square.fa-5x
+      %br/
+  .bg-trans.dark-gray.h3.absolute.bottom-0.full-width
+    .col.col-6.left-align.max-width-main.full-width.absolute-center
+      %a.dark-gray.ml1{:href => "#", :title => "we tweet!"}
         %i.fa.fa-twitter.grow
       &nbsp;
       %a.dark-gray{:href => "#", :title => "we instagram!"}
@@ -54,6 +49,7 @@
       &nbsp;
       %a.dark-gray{:href => "#", :title => "we pinterest!"}
         %i.fa.fa-pinterest-p.grow
+    .col-right.col-6.right-align
 %br/
 .clearfix.m2.max-width-main.absolute-center.center
   .flex-block-3.center
