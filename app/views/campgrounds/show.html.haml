@@ -12,44 +12,65 @@
         Register Free!
       .button.m1.p1.mr2{:href => "#", :title => "log in"}
         Log In
-  .absolute.bottom-0.right-0
-    .mb3.ml3
-      %a.white{:href => "#", :title => "i've been here!"}
-        %i.fa.fa-map-marker.fa-2x.grow
-      &nbsp;
-      %a.white.mr2{:href => "#", :title => "favorite!"}
-        %i.fa.fa-heartbeat.fa-2x.grow
   .white.max-width-main.full-width
-    .col.col-9.left-align.bottom-0.absolute.mb3.ml1
+    .left-0.bottom-0.absolute.mb-cg-main.ml1
       .h5.caps
-        = [@campground.state, " | ",@campground.region2].join("")
+        = link_to @campground.state, '#', :title => @campground.state, :class => 'cg-main-link'
+        &nbsp;|&nbsp;
+        = link_to @campground.region2, '#', :title => @campground.region2, :class => 'cg-main-link'
       .h1.bold
         = @campground.name
       .italic.h5
         = ["N",format('%.4f',@campground.lat).chop, ", ","W",format('%.4f',@campground.lon.abs).chop].join("")
         &nbsp;
         = ["Elevation: ",number_with_delimiter(@campground.elevation,:delimiter => ',') ," ft"].join("")
-    .col-right.col-3.right-align.mt4.mr2
-      %br/
-      %i.fa.fa-square.fa-5x
-      %br/
-      %i.fa.fa-square.fa-5x
-      %br/
-      %i.fa.fa-square.fa-5x
-      %br/
-      %i.fa.fa-square.fa-5x
-      %br/
+    .absolute.right-0.top-0.mt-cg-main.mr1
+      %table.py1.right-align
+        %tr
+          %th.bg-white.rounded.dark-gray.ratings.absolute-center
+            .absolute-center.center
+              .h5 RV
+              3.5
+        %tr
+          %th
+        %tr
+          %th.bg-white.rounded.dark-gray.ratings.absolute-center
+            .absolute-center.center
+              .h5 Family
+              3.8
+        %tr
+          %th
+        %tr
+          %th.bg-white.rounded.dark-gray.ratings.absolute-center
+            .absolute-center.center
+              .h5 Rugged
+              3.8
+        %tr
+          %th
+        %tr
+          %th.bg-white.rounded.dark-gray.ratings.absolute-center
+            .absolute-center.center
+              .h5 Scenic
+              3.8
+        %tr
+          %th
+        %tr
+          %th.bg-white.rounded.dark-gray.ratings.absolute-center
+            .absolute-center.center
+              %span.h5.socialShare
+
   .bg-trans.dark-gray.h3.absolute.bottom-0.full-width
     .col.col-6.left-align.max-width-main.full-width.absolute-center
-      %a.dark-gray.ml1{:href => "#", :title => "we tweet!"}
-        %i.fa.fa-twitter.grow
       &nbsp;
-      %a.dark-gray{:href => "#", :title => "we instagram!"}
-        %i.fa.fa-instagram.grow
-      &nbsp;
-      %a.dark-gray{:href => "#", :title => "we pinterest!"}
-        %i.fa.fa-pinterest-p.grow
     .col-right.col-6.right-align
+      %a.black.h4{:href => "#", :title => "share campground!"}
+        %i.fa.fa-share-alt.grow
+      &nbsp;
+      %a.black{:href => "#", :title => "i've been here!"}
+        %i.fa.fa-check-square-o.grow
+      &nbsp;
+      %a.black.mr2{:href => "#", :title => "favorite!"}
+        %i.fa.fa-heartbeat.grow
 %br/
 .clearfix.m2.max-width-main.absolute-center.center
   .flex-block-3.center

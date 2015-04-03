@@ -1,6 +1,8 @@
 class CampgroundsController < ApplicationController
 	def index
-		@campgrounds = Campground.all
+		#@campgrounds = Campground.all
+		@search = Campground.search(params[:q])
+  		@campgrounds = @search.result
 	end
 	
 	def show

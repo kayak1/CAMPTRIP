@@ -53,6 +53,15 @@ font-style: normal;
 .height-500{
   height: 520px;
 }
+.ratings{
+  width: 50px;
+  height: 50px;
+}
+.ratings:hover {
+  color: white;
+  background-color: #ff4136;
+  cursor: pointer;
+}
 .map-width{
   max-width: 800px;
   top: 0;
@@ -60,6 +69,18 @@ font-style: normal;
   bottom: 0;
   left: 0;
   margin: auto;
+}
+.mb-cg-main{
+  margin-bottom: 3.25rem;
+}
+.cg-main-link{
+  color: white;
+}
+.cg-main-link:hover {
+  text-decoration: underline;
+}
+.mt-cg-main{
+  margin-top: 3.5rem;
 }
 .flex-block-3 {
   display: inline-block;

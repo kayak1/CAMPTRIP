@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root :to => "home#index"
 
   resources :campgrounds do
+    collection { post :search, to: 'campgrounds#index' }
     resources :campsites
   end
  

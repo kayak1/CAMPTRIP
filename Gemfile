@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'font-awesome-sass'
 gem 'haml'
 gem 'friendly_id'
+gem 'ransack'
 
 gem 'mysql2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
